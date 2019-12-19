@@ -1,0 +1,32 @@
+spring:
+  profiles:
+    active: ${profile.active:dev}
+  application:
+    name: api-gateway
+  cloud:
+    config:
+      uri: http://localhost:8760
+      profile: ${spring.profiles.active}
+      name: ${spring.application.name}
+#  #关闭弹出的默认认证登录框
+#  security.basic.enabled=false
+#  #忽略框架默认的服务映射路径
+#  zuul.ignoredServices='*'
+#  #不忽略框架与权限相关的头信息
+#  zuul.ignoreSecurityHeaders=false
+#  #不忽略任何头部信息，所有header都转发到下游的资源服务器
+#  zuul.sensitiveHeaders=
+#  #以下是自定义服务与路径的映射关系，也可以通过path和url直接映射
+#  zuul.product.serviceId=product
+#  zuul.product.path=/product/**
+#  zuul.sso.serviceId=sso
+#  zuul.sso.path=/sso/**
+#  zuul.manage.serviceId=manage
+#  zuul.manage.path=/manage/**
+#  #网关的session名字，建议每个微服务都单独命名
+#  server.session.cookie.name= GATWAY_SESSION
+#  server.port=80
+#  spring.application.name=gatway
+#  #配置注册中心的地址，以便根据serviceID去发现这些service
+#  eureka.instance.hostname=localhost
+#  eureka.client.serviceUrl.defaultZone=http://localhost:7771/eureka

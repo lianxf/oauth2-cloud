@@ -1,0 +1,17 @@
+server:
+  port: 8760
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          skipSslValidation: true
+          uri: https://github.com/lianxf/oauth2-cloud-config.git
+eureka:
+ instance:
+   non-secure-port: ${server.port}
+   instance-id: ${spring.cloud.client.ip-address}:${server.port}
+ client:
+   service-url:
+     defaultZone: http://admin:admin@localhost:8761/eureka/
+   fetch-registry: true
