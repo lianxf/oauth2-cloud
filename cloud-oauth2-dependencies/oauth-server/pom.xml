@@ -60,6 +60,10 @@
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
         </dependency>
+        <dependency>
+            <groupId>cn.lianxf</groupId>
+            <artifactId>oauth2-common</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

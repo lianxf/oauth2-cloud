@@ -1,4 +1,4 @@
-package cn.lianxf.oauth.common.service;
+package cn.lianxf.oauth.server.service;
 
 import cn.hutool.core.collection.CollectionUtil;
 import cn.lianxf.oauth.common.domain.UserInfo;
@@ -12,12 +12,12 @@ import org.springframework.stereotype.Service;
 /**
  * @author beyond09.hik
  * @version 1.0
- * @className CommonUserDetailsService
+ * @className UserDetailsServiceImpl
  * @description  用户身份信息验证
  * @date 2019/12/19 19:02
  */
 @Service
-public class CommonUserDetailsService implements UserDetailsService {
+public class UserDetailsServiceImpl implements UserDetailsService {
 
     /**
      * 验证用户身份信息

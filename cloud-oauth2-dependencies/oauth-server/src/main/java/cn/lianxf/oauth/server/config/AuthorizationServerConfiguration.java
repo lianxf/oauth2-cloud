@@ -1,4 +1,4 @@
-package cn.lianxf.oauth.common.config.security;
+package cn.lianxf.oauth.server.config;
 
 import cn.lianxf.oauth.common.config.token.JwtAccessToken;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +29,7 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
     private AuthenticationManager authenticationManager;
 
     @Autowired
-    private UserDetailsService commonUserDetailsService;
+    private UserDetailsService userDetailsServiceImpl;
 
     @Autowired
     private TokenStore tokenStore;
@@ -71,7 +71,7 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
                 // 配置JwtAccessToken转换器
                 .accessTokenConverter(jwtAccessTokenConverter())
                 // refresh_token需要userDetailsService
-                .reuseRefreshTokens(false).userDetailsService(commonUserDetailsService)
+                .reuseRefreshTokens(false).userDetailsService(userDetailsServiceImpl)
                 .tokenStore(tokenStore);
     }
 

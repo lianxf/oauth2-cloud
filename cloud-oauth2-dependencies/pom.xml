@@ -29,6 +29,7 @@
         <cn.hutool.version>5.0.7</cn.hutool.version>
         <spring.boot.version>2.0.3.RELEASE</spring.boot.version>
         <mysql.version>8.0.17</mysql.version>
+        <oauth.cloud.version>1.0-SNAPSHOT</oauth.cloud.version>
     </properties>
 
     <dependencyManagement>
@@ -97,7 +98,11 @@
                 <artifactId>spring-boot-starter-data-redis</artifactId>
                 <version>${spring.boot.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>cn.lianxf</groupId>
+                <artifactId>oauth2-common</artifactId>
+                <version>${oauth.cloud.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>
