@@ -28,7 +28,7 @@
         <spring.cloud.security.version>2.2.0.RELEASE</spring.cloud.security.version>
         <cn.hutool.version>5.0.7</cn.hutool.version>
         <spring.boot.version>2.0.3.RELEASE</spring.boot.version>
-        <mysql.version>8.0.17</mysql.version>
+        <mysql.version>8.0.28</mysql.version>
         <oauth.cloud.version>1.0-SNAPSHOT</oauth.cloud.version>
     </properties>
 
